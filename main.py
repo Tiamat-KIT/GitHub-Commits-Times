@@ -60,7 +60,7 @@ print(f"最初のコミット：{start_date.strftime('%Y/%m/%d %H:%M:%S')}")
 print(f"最後のコミット：{end_date.strftime('%Y/%m/%d %H:%M:%S')}")
 print(f"合計開発時間（大雑把）：{total_days}日 {total_hours}時間 {total_minutes}分")
 
-print("各ブランチでの開発時間")
+print("各コミットでの開発時間")
 total_branch_times = 0
 for branch, time in branch_times.items():
   print(f"- [{branch}] : {time}時間")
