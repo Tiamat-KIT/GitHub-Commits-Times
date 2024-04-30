@@ -58,7 +58,11 @@ total_minutes = (total_time.seconds // 60) % 60
 # 結果の表示
 print(f"最初のコミット：{start_date.strftime('%Y/%m/%d %H:%M:%S')}")
 print(f"最後のコミット：{end_date.strftime('%Y/%m/%d %H:%M:%S')}")
-print(f"合計開発時間：{total_days}日 {total_hours}時間 {total_minutes}分")
-# print("各ブランチでの開発時間")
-# for branch, time in branch_times.items():
-#  print(f"- [{branch}] : {time}時間")
+print(f"合計開発時間（大雑把）：{total_days}日 {total_hours}時間 {total_minutes}分")
+
+print("各ブランチでの開発時間")
+total_branch_times = 0
+for branch, time in branch_times.items():
+  print(f"- [{branch}] : {time}時間")
+  total_branch_times += time
+print(f"コミットごとの経過時間をまとめた時間；{total_branch_times // 24}日{total_branch_times % 24}")
