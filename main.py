@@ -65,4 +65,4 @@ total_branch_times = 0
 for branch, time in branch_times.items():
   print(f"- [{branch}] : {time}時間")
   total_branch_times += time
-print(f"コミットごとの経過時間をまとめた時間；{total_branch_times // 24}日{total_branch_times % 24}")
+print(f"コミットごとの経過時間をまとめた時間；{total_branch_times // 24}日{total_branch_times % 24}時間")
